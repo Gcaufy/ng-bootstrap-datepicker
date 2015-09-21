@@ -1,0 +1,104 @@
+$red: rgb(145,23,34);
+$redHover: rgb(125,3,14);
+.gtadatepicker {
+	border-radius: 10px;
+  	overflow: hidden;
+  	padding: 0px;
+  	width: 282px;
+  	&.datepicker-inline {
+  		width: 282px;
+  	}
+	table {
+		background-color: $red;
+		width: 280px;
+		thead {
+			th {
+				border-radius: 0px;
+				-webkit-border-radius: 0px;
+				-moz-border-radius: 0px;
+				text-indent: 0px !important;
+			}
+			.prev, .next {
+				width: 40px;
+			}
+			tr:first-child {
+				background-color: transparent;
+				height: 60px;
+				th {
+					color: #fff;
+					font-size: 16px;
+					&:hover {
+						background-color: $redHover;
+					}
+				}
+			}
+			tr:nth-child(2) {
+				background-color: #fff;
+				border-bottom: 3px solid #ccc;
+				th {
+					color: $red;
+					height: 12px;
+					line-height: 12px;
+					font-size: 11px;
+					width: 40px;
+					overflow: hidden;
+				}
+			}
+		}
+		tbody {
+			tr {
+				td {
+					border-radius: 0px;
+					-webkit-border-radius: 0px;
+					-moz-border-radius: 0px;
+
+					padding: 0px;
+					margin: 0px;
+					height: 40px;
+					width: 40px;
+					border: 1px solid #ccc;
+					background-color: #fff;
+					text-indent: 0px;
+					color: rgb(129,129,129);
+					&.disabled {
+						background-color: #fff;
+					}
+                    &.range {
+                        background-color: #e0e0e0 !important;
+                    }
+					&.day {
+						&:not(.disabled):hover {
+							background-color: #eee !important;
+						}
+						&.disabled {
+							cursor: not-allowed;
+							text-decoration: line-through;
+						}
+						&.old {
+							color: #d4d4d4;
+						}
+						&.new {
+							color: #d4d4d4;
+						}
+					}
+				}
+			}
+			tr:nth-child(even) {
+				td:nth-child(even) {
+					background-color: #f9f9f9;
+				}
+				td:nth-child(odd) {
+					background-color: #fff;
+				}
+			}
+			tr:nth-child(odd) {
+				td:nth-child(even) {
+					background-color: #fff;
+				}
+				td:nth-child(odd) {
+					background-color: #f9f9f9;
+				}
+			}
+		}
+	}
+}

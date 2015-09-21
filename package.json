@@ -1,24 +1,29 @@
 {
   "name": "ng-bootstrap-datepicker",
   "version": "1.0.0",
-  "description": "HKGTA",
-  "main": "index.js",
+  "description": "AngularJS bootstrap datepicker module",
+  "main": "ng-bootstrap-datepicker.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git@github.com:Gcaufy/ng-bootstrap-datepicker.git"
   },
   "keywords": [
     "datepicker"
   ],
-  "author": "EPAM",
-  "license": "ISC",
+  "author": "Gcaufy",
+  "license": "MIT",
   "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.0.4",
+    "gulp-uglify": "^1.2.0"
   },
   "path": {
-    "app": "app",
+    "app": "source",
     "dist": "dist"
   }
 }
