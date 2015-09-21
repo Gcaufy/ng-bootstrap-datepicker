@@ -1,3 +1,10 @@
+bootstrap-datepicker的angularjs module.
+
+> [bootstrap-datepicker github](https://github.com/eternicode/bootstrap-datepicker/)
+>
+> [bootstrap-datepicker document](http://bootstrap-datepicker.readthedocs.org/en/latest/)
+>
+
 # 属性
 ***
 
@@ -5,15 +12,16 @@
 
 此类属性以`ng-dp-`为前缀, 其并非bootstrap-datepicker 原生支持属性, 为支持angularJS提供或者是功能扩展属性.
 
-|| *名称* || *默认值* || *描述* ||
-|| ng-dp-model || - || scope双向绑定值, 可以直接读取或者设置datepicker选择日期. ||
-|| ng-dp-element || - || 向`scope`中添加`datepicker`实例, 防止我们需要动态操作`datepicker`. 如在HTML中: `ng-dp-element="dpObj"`在JS中可以直接使用`dpObj.datepicker('setDisabled', '2015-02-03');` ||
-|| ng-dp-inline || false || 创建inline datepicker, 无文本框. ||
-|| ng-dp-default || - || `datepicker`初始值, 值可以为`today`或者`2015-09-21`(时间字符串) ||
-|| ng-dp-view || - || 些属性为功能扩展属性, 当`ng-dp-view="week"`时, 日历变为周选择日历. ||
-|| ng-dp-range-target || - || 需要两个日历, `ng-dp-range-target`指向另一个`datepicker`的`ng-dp-element`. ||
-|| ng-dp-range-mode || false || 当`ng-dp-range-mode="true"`时. 可以从日期中选取一个时间区间. ||
-|| ng-dp-load || - || Directive 初始化完成之后执行的事件. ||
+| *名称* | *默认值* | *描述* |
+| :------ |:----:| :-----------|
+| ng-dp-model | - | scope双向绑定值, 可以直接读取或者设置datepicker选择日期. |
+| ng-dp-element | - | 向`scope`中添加`datepicker`实例, 防止我们需要动态操作`datepicker`. <br />如在HTML中: `ng-dp-element="dpObj"`在JS中可以直接使用`dpObj.datepicker('setDisabled', '2015-02-03');` |
+| ng-dp-inline | false | 创建inline datepicker, 无文本框. |
+| ng-dp-default | - | `datepicker`初始值, 值可以为`today`或者`2015-09-21`(时间字符串) |
+| ng-dp-view | - | 些属性为功能扩展属性, 当`ng-dp-view="week"`时, 日历变为周选择日历. |
+| ng-dp-range-target | - | 需要两个日历, `ng-dp-range-target`指向另一个`datepicker`的`ng-dp-element`. |
+| ng-dp-range-mode | false | 当`ng-dp-range-mode="true"`时. 可以从日期中选取一个时间区间. |
+| ng-dp-load | - | Directive 初始化完成之后执行的事件. |
 
 
 
