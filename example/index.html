@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ng-bootstrap-datepicker</title>
+	<link href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+	<link href="http://cdn.bootcss.com/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker.min.css" rel="stylesheet">
+	<link href="http://v3.bootcss.com/assets/css/docs.min.css" rel="stylesheet">
+
+</head>
+<body>
+
+<div ng-app="myApp" ng-controller="myCtrl" style="width: 800px; margin: auto;">
+
+	
+	<h1><strong>属性</strong></h1>
+	<hr />
+	<h3><strong>非原生属性</strong></h3>
+	<p>此类属性以<code>ng-dp-</code>为前缀, 其并非bootstrap-datepicker 原生支持属性, 为支持angularJS提供或者是功能扩展属性.</p>
+	<p>
+		<table class="table table-bordered table-striped js-options-table">
+			<thead>
+				<tr>
+					<th>名称</th>
+					<th>默认值</th>
+					<th>描述</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>ng-dp-model</td>
+					<td>-</td>
+					<td>scope双向绑定值, 可以直接读取或者设置datepicker选择日期.</td>
+				</tr>
+				<tr>
+					<td>ng-dp-element</td>
+					<td>-</td>
+					<td>向scope中添加 datepicker 实例, 防止我们需要动态操作datepicker. 如在HTML中: <code>ng-dp-element="dpObj"</code>在JS中可以直接使用<code>dpObj.datepicker('setDisabled', '2015-02-03');</code></td>
+				</tr>
+				<tr>
+					<td>ng-dp-inline</td>
+					<td>false</td>
+					<td>创建inline datepicker, 无文本框.</td>
+				</tr>
+				<tr>
+					<td>ng-dp-default</td>
+					<td>-</td>
+					<td>datepicker初始值, 值可以为<code>today</code>或者<code>2015-09-21</code>(时间字符串)</td>
+				</tr>
+				<tr>
+					<td>ng-dp-view</td>
+					<td>-</td>
+					<td>些属性为功能扩展属性, 当<code>ng-dp-view="week"</code>时, 日历变为周选择日历.</td>
+				</tr>
+				<tr>
+					<td>ng-dp-range-target</td>
+					<td>-</td>
+					<td>需要两个日历, <code>ng-dp-range-target</code>指向另一个datepicker的<code>ng-dp-element</code>.</td>
+				</tr>
+				<tr>
+					<td>ng-dp-range-mode</td>
+					<td>false</td>
+					<td>当<code>ng-dp-range-mode="true"</code>时. 可以从日期中选取一个时间区间.</td>
+				</tr>
+				<tr>
+					<td>ng-dp-load</td>
+					<td>-</td>
+					<td>Directive 初始化完成之后执行的事件.</td>
+				</tr>
+			</tbody>
+		</table>
+	</p>
+
+	<h3><strong>原生属性与事件</strong></h3>
+	<p>
+		此类属性以<code>ng-dp-option-</code>或者<code>ng-dp-event-</code>为前缀, 一个表示原生属性, 一个为原生事件, 直接所有原生属性与事件. 可以参考<a href="http://bootstrap-datepicker.readthedocs.org/en/latest/" target="_blank">官方文档</a>查看所有可用属性与事件. 转换时, 需要将驼峰属性/事件改为<code>-</code>连接, 并且加上<code>ng-dp-(option/event)</code>前缀, 如原文档中属性<code>startDate</code>需要改写为<code>ng-dp-option-start-date</code>, 原文档中事件<code>changeDate</code>需要改写为<code>ng-dp-event-change-date</code>
+	</p>
+	
+	<br />
+	<h1><strong>DEMO</strong></h1>
+	<hr />
+	<h3>默认</h3>
+	<p></p>
+    <div class="bs-example">
+    	<ng-datepicker ng-dp-model="mydate"></ng-datepicker>
+    </div>
+    <div class="zero-clipboard"><span class="btn-clipboard">复制</span></div>
+	<div class="highlight">
+		<pre>
+			&lt;ng-datepicker ng-dp-model="mydate"&gt;&lt;/ng-datepicker&gt;
+		</pre>
+	</div>
+
+
+	<h3>bootstrap-datepicker 属性与事件</h3>
+	<p></p>
+    <div class="bs-example">
+    	<ng-datepicker ng-dp-option-format="yyyy-mm-dd" ng-dp-option-start-date="today" ng-dp-event-change-date="changeDate" ng-dp-event-change-month="changeMonth"></ng-datepicker>
+    </div>
+    <div class="zero-clipboard"><span class="btn-clipboard">复制</span></div>
+	<div class="highlight">
+		<pre>
+			&lt;ng-datepicker 
+				<br />ng-dp-option-format="yyyy-mm-dd"
+				<br />ng-dp-option-start-date="today"
+				<br />ng-dp-event-change-date="changeDate"
+				<br />ng-dp-event-change-month="changeMonth"
+				&gt;&lt;/ng-datepicker&gt;
+		</pre>
+	</div>
+	
+	<h3>Inline Datepicker</h3>
+	<p></p>
+    <div class="bs-example">
+    	<ng-datepicker ng-dp-inline="true" ng-dp-default="today"></ng-datepicker>
+    </div>
+    <div class="zero-clipboard"><span class="btn-clipboard">复制</span></div>
+	<div class="highlight">
+		<pre>
+			&lt;ng-datepicker ng-dp-inline="true" ng-dp-default="today"&gt;&lt;/ng-datepicker&gt;
+		</pre>
+	</div>
+
+
+	<h3>Weekly Selected Datepicker</h3>
+	<p></p>
+    <div class="bs-example">
+    	<ng-datepicker ng-dp-view="week" ng-dp-inline="true" ng-dp-option-start-date="today"></ng-datepicker>
+    </div>
+    <div class="zero-clipboard"><span class="btn-clipboard">复制</span></div>
+	<div class="highlight">
+		<pre>
+			&lt;ng-datepicker ng-dp-inline="true" ng-dp-option-start-date="today"&gt;&lt;/ng-datepicker&gt;
+		</pre>
+	</div>
+
+
+	<h3>Related Datepicker</h3>
+	<p></p>
+    <div class="bs-example">
+    	<ng-datepicker ng-dp-element="dp1" ng-dp-range-target="dp2" ng-dp-inline="true"></ng-datepicker>
+    	<ng-datepicker ng-dp-element="dp2" ng-dp-inline="true"></ng-datepicker>
+    </div>
+    <div class="zero-clipboard"><span class="btn-clipboard">复制</span></div>
+	<div class="highlight">
+		<pre>
+			&lt;ng-datepicker ng-dp-inline="true" ng-dp-option-start-date="today"&gt;&lt;/ng-datepicker&gt;
+		</pre>
+	</div>
+
+
+	<h3>Range Datepicker</h3>
+	<p></p>
+    <div class="bs-example">
+    	<ng-datepicker ng-dp-range-mode="true"></ng-datepicker>
+    </div>
+    <div class="zero-clipboard"><span class="btn-clipboard">复制</span></div>
+	<div class="highlight">
+		<pre>
+			&lt;ng-datepicker ng-dp-range-mode="true"&gt;&lt;/ng-datepicker&gt;
+		</pre>
+	</div>
+	
+
+	<br /><br /><br /><br /><br /><br /><br /><br /><br />
+	<br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<script src="http://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+<script src="http://cdn.bootcss.com/angular.js/1.5.0-beta.0/angular.min.js"></script>
+<script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="http://cdn.bootcss.com/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+
+
+
+<script src="../source/js/ng-bootstrap-datepicker.js"></script>
+
+<script src="app.js"></script>
+
+
+</body>
+</html>
+
+
+

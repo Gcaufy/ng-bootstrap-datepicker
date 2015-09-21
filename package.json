@@ -1,0 +1,24 @@
+{
+  "name": "ng-bootstrap-datepicker",
+  "version": "1.0.0",
+  "description": "HKGTA",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "datepicker"
+  ],
+  "author": "EPAM",
+  "license": "ISC",
+  "devDependencies": {
+  },
+  "path": {
+    "app": "app",
+    "dist": "dist"
+  }
+}

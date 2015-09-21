@@ -1,0 +1,15 @@
+{
+    "name": "ng-bootstrap-datepicker",
+    "main": "ng-bootstrap-datepicker.js",
+    "homepage": "https://github.com/Gcaufy/ng-bootstrap-datepicker",
+    "dependencies": {
+        "angular": ">1.3.5",
+        "bootstrap-datepicker": "1.4.0"
+    },
+    "authors": [
+        "gcaufy <gcaufy@gmail.com>"
+    ],
+    "description": "bootstrap datepicker directive",
+    "ignore": [],
+    "license": "MIT"
+}
