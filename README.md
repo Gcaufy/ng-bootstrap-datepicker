@@ -4,7 +4,8 @@ bootstrap-datepicker的angularjs module.
 >
 > [bootstrap-datepicker document](http://bootstrap-datepicker.readthedocs.org/en/latest/)
 >
-
+> [Online Demo](http://www.madcoder.cn/demos/ng-bootstrap-datepicker/example/index.html)
+>
 # 属性
 ***
 
