@@ -6,8 +6,10 @@ bootstrap-datepicker的angularjs module.
 [Online Demo](http://www.madcoder.cn/demos/ng-bootstrap-datepicker/example/index.html)
 
 # Install
-***
-`bower install ng-bootstrap-datepicker --save-dev`
+
+```
+bower install ng-bootstrap-datepicker --save-dev
+```
 
 # 属性
 ***
