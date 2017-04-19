@@ -1,11 +1,9 @@
 bootstrap-datepicker的angularjs module.
 
-> [bootstrap-datepicker github](https://github.com/eternicode/bootstrap-datepicker/)
->
-> [bootstrap-datepicker document](http://bootstrap-datepicker.readthedocs.org/en/latest/)
->
-> [Online Demo](http://www.madcoder.cn/demos/ng-bootstrap-datepicker/example/index.html)
->
+
+# Demo
+
+[Online Demo](http://www.madcoder.cn/demos/ng-bootstrap-datepicker/example/index.html)
 
 # Install
 ***
@@ -34,3 +32,11 @@ bootstrap-datepicker的angularjs module.
 ### 原生属性与事件
 
 此类属性以`ng-dp-option-`或者`ng-dp-event-`为前缀, 一个表示原生属性, 一个为原生事件, 直接所有原生属性与事件. 可以参考[官方文档](http://bootstrap-datepicker.readthedocs.org/en/latest/)查看所有可用属性与事件. 转换时, 需要将驼峰属性/事件改为-连接, 并且加上`ng-dp-(option/event)`前缀, 如原文档中属性`startDate`需要改写为`ng-dp-option-start-date`, 原文档中事件`changeDate`需要改写为`ng-dp-event-change-date`
+
+### Documents
+
+> [bootstrap-datepicker github](https://github.com/eternicode/bootstrap-datepicker/)
+>
+> [bootstrap-datepicker document](http://bootstrap-datepicker.readthedocs.org/en/latest/)
+>
+
